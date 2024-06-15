@@ -1,5 +1,7 @@
+
 Alignment Process
 
+```
     32 = 100000
     31 =  11111 
 
@@ -35,3 +37,4 @@ Alignment Process
    ptr*   sizeof(void*)  aligned
                           addr
    4097                   4128
+```
