@@ -1,5 +1,4 @@
-
-Alignment Process
+## Alignment Process
 
 ```
     32 = 100000
