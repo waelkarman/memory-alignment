@@ -17,6 +17,8 @@
 
    4096 is aligned.
    +31 For ensuring to reach the next aligned address.
+
+   EXAMPLES:
    4097 + 31 = 4128  ->  0001000000100000
    4100 + 31 = 4131  ->  0001000000100011
 
