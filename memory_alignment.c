@@ -58,12 +58,14 @@ void* mallo_32_aligned(size_t size){
     return align_p;
 }
 
-void free_32_aligned(void* aligned_p){
-    void** p = aligned_p;
-    aligned_p = NULL;
+void free_32_aligned(void** aligned_pp) {
+    if (!aligned_pp || !*aligned_pp) return;  // handle NULL pointers
+
+    void** p = *aligned_pp;
     void* notaligned_p = (void*)p[-1];
-    printf("Restored pointer: %p \n",notaligned_p);
+    printf("Restored pointer: %p \n", notaligned_p);
     free(notaligned_p);
+    *aligned_pp = NULL;  // Nullify the original pointer
 }
 
 int main() {
